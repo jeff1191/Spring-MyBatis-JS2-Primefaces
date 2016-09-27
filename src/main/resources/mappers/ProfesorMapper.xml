@@ -1,0 +1,15 @@
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.autentia.integracion.mapper.DaoProfesor">
+
+<resultMap  type='com.autentia.integracion.model.Profesor' id="Profesor">
+    <id property='id' column='id'/>
+    <result property='nombre' column='nombre'/>   
+</resultMap>
+ 
+ <select id="consultarTodos" resultMap="Profesor">
+     SELECT * FROM profesor
+ </select>
+ 
+</mapper>
